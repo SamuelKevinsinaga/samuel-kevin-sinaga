@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Perpustakaan UNIMED</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-       body {
+        body {
             background-image: url("picture/Winners 2013.jpeg");
             background-size: cover;
             color: black;
@@ -23,6 +25,20 @@
         p {
             color: red;
         }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .section1 {
+            background-color: yellow;
+        }
+        .section2 {
+            background-color: lightgreen;
+        }
+        .section3 {
+            background-color: lightcoral;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -39,28 +55,36 @@
     </style>
 </head>
 <body>
-    <h1 style="color: blue; text-align: center; text-decoration: underline;">Perpustakaan UNIMED</h1>
-    <h2>Selamat Datang di Web Perpustakaan UNIMED</h2>
-    <p>Samuel Kevin Sinaga 222201021
-    <i>web</i> ini adalah web pertama saya 
-    </p>
-    <h3>Berikut ini adalah gambar dari gedung Perpustakaan UNIMED.</h3>
-    <h4>
-        <center>
-            <img src="https://www.unimed.ac.id/wp-content/uploads/2022/06/unimedmenubaru-scaled.jpg" alt="Gedung Perpustakaan UNIMED" />
-        </center>
-    </h4>
-    <p style="margin-bottom: 50px">
-        <h5><i>Perpustakaan UNIMED</i></h5>
-    </p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/e8DYUPu3PuM?si=MZnc00nOnOfrv1wl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p><h6>THE PAPS - FANA</h6></p>
-    <p style="margin-bottom: 50px">
-        <audio controls>
-            <source src="music/Fana.mp3" type="audio/mpeg">
-        </audio>
-    </p>
-<h2>Formulir Pemesanan Buku</h2>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Perpustakaan UNIMED</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#pemesanan">Pemesanan Buku</a></li>
+                <li><a href="#perpanjangan">Perpanjangan Buku</a></li>
+                <li><a href="#tabel">Tabel Bahan Buku</a></li>
+                <li><a href="#anggota">Anggota Perpustakaan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section 1 -->
+    <section id="home" class="section1">
+        <h1>Perpustakaan UNIMED</h1>
+        <h2>Selamat Datang di Web Perpustakaan UNIMED</h2>
+        <p>Samuel Kevin Sinaga 222201021 <i>web</i> ini adalah web pertama saya</p>
+        <h3>Berikut ini adalah gambar dari gedung Perpustakaan UNIMED.</h3>
+        <img src="https://www.unimed.ac.id/wp-content/uploads/2022/06/unimedmenubaru-scaled.jpg" alt="Gedung Perpustakaan UNIMED" class="img-responsive center-block" />
+        <p style="margin-bottom: 50px"><h5><i>Perpustakaan UNIMED</i></h5></p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="pemesanan" class="section2">
+        <h2>Formulir Pemesanan Buku</h2>
         <form>
             <table>
                 <tr>
@@ -112,7 +136,10 @@
                 </tr>
             </table>
         </form>
-    
+    </section>
+
+    <!-- Section 3 -->
+    <section id="perpanjangan" class="section3">
         <h2>Formulir Perpanjangan Peminjaman Buku</h2>
         <form>
             <table>
@@ -148,7 +175,7 @@
                 </tr>
                 <tr>
                     <td>Tanggal Perpanjangan Peminjaman Buku:</td>
-                    <td><input type="date" name="Tanggal Perpanjang Peminjaman Buku" /></td>
+                    <td><input type="date" name="Tanggal Pemanjang Peminjaman Buku" /></td>
                 </tr>
                 <tr>
                     <td>Alasan Perpanjangan:</td>
@@ -161,7 +188,10 @@
                 </tr>
             </table>
         </form>
-    
+    </section>
+
+    <!-- Section 4: Tabel Bahan Buku -->
+    <section id="tabel" class="section1">
         <h2>Tabel Bahan Buku</h2>
         <table>
             <tr>
@@ -179,7 +209,7 @@
                 <td>Indrawati Ganjar</td>
                 <td>Yayasan Obor Indonesia</td>
                 <td>2006</td>
-                <td>235 </td>
+                <td>235</td>
                 <td>979-461-616-8</td>
             </tr>
             <tr>
@@ -194,7 +224,7 @@
             <tr>
                 <td>3</td>
                 <td>"Menyibak karya sastra Perempuan Penderita HIV/AIDS"</td>
-                <td>Munawaroh, Lailatul </td>
+                <td>Munawaroh, Lailatul</td>
                 <td>Balai Bahasa Bandung</td>
                 <td>2011</td>
                 <td>5</td>
@@ -203,7 +233,7 @@
             <tr>
                 <td>4</td>
                 <td>"Ekologi hewan"</td>
-                <td>Sipayung, Mariaty </td>
+                <td>Sipayung, Mariaty</td>
                 <td>Departemen Pendidikan Nasional Badan Penelitian dan Pengembangan</td>
                 <td>2014</td>
                 <td>140</td>
@@ -212,15 +242,17 @@
             <tr>
                 <td>5</td>
                 <td>"Kapita selekta kedokteran veteriner (hewan kecil)"</td>
-                <td>Wiryosuhanto, Sri Dadi </td>
+                <td>Wiryosuhanto, Sri Dadi</td>
                 <td>Pustaka populer obors</td>
                 <td>2001</td>
                 <td>222</td>
                 <td>979-461-366-7</td>
             </tr>
         </table>
-    
-    
+    </section>
+
+    <!-- Section 5 -->
+    <section id="anggota" class="section2">
         <h2>Formulir Anggota Perpustakaan Program Studi</h2>
         <form>
             <table>
@@ -265,6 +297,10 @@
                     </td>
                 </tr>
             </table>
-            
+        </form>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
