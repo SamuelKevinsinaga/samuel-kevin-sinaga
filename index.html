@@ -52,34 +52,45 @@
         th {
             background-color: lightgray;
         }
+        .navbar-default {
+    background-color: #f8f8f8; /* Ubah sesuai warna yang diinginkan */
+    border-color: #e7e7e7;
+    }
+    .navbar-default .navbar-brand {
+    color: #337ab7; /* Ubah warna teks */
+    }
+    .navbar-default .navbar-nav > li > a {
+    color: #337ab7; /* Ubah warna teks untuk item menu */
+    }
+    .navbar-default .navbar-nav > li > a:hover {
+    background-color: #e7e7e7; /* Efek hover */
+    }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Perpustakaan UNIMED</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Beranda</a>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Perpustakaan UNIMED</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbarNav" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Buku <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#pemesanan">Pemesanan Buku</a></li>
+                        <li><a href="#perpanjangan">Perpanjangan Buku</a></li>
+                        <li><a href="#tabel">Tabel Bahan Buku</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Buku
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#pemesanan">Pemesanan Buku</a>
-                        <a class="dropdown-item" href="#perpanjangan">Perpanjangan Buku</a>
-                        <a class="dropdown-item" href="#tabel">Tabel Bahan Buku</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#anggota">Anggota Perpustakaan</a>
-                </li>
+                <li><a href="#anggota">Anggota Perpustakaan</a></li>
             </ul>
         </div>
     </div>
