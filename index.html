@@ -56,21 +56,34 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Perpustakaan UNIMED</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#pemesanan">Pemesanan Buku</a></li>
-                <li><a href="#perpanjangan">Perpanjangan Buku</a></li>
-                <li><a href="#tabel">Tabel Bahan Buku</a></li>
-                <li><a href="#anggota">Anggota Perpustakaan</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Perpustakaan UNIMED</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Beranda</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Buku
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#pemesanan">Pemesanan Buku</a>
+                        <a class="dropdown-item" href="#perpanjangan">Perpanjangan Buku</a>
+                        <a class="dropdown-item" href="#tabel">Tabel Bahan Buku</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#anggota">Anggota Perpustakaan</a>
+                </li>
             </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <section id="home" class="section1">
         <h1>Perpustakaan UNIMED</h1>
