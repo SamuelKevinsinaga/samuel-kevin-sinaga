@@ -57,3 +57,59 @@
     </style>
 </head>
 <body>
+    <section id="anggota">
+    <h2>Formulir Anggota Perpustakaan Program Studi</h2>
+    <form>
+        <table>
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>Nomor Induk Mahasiswa (NIM):</td>
+                <td><input type="text" class="form-control" name="NIM" /></td>
+            </tr>
+            <tr>
+                <td>Program Studi:</td>
+                <td>
+                    <select class="form-control" name="prodi">
+                        <option value="ilmu perpustakaan">Ilmu Perpustakaan</option>
+                        <option value="informatika">Informatika</option>
+                        <option value="manajemen">Manajemen</option>
+                        <option value="akuntansi">Akuntansi</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Fakultas:</td>
+                <td><input type="text" class="form-control" name="fakultas" /></td>
+            </tr>
+            <tr>
+                <td>Alamat Rumah:</td>
+                <td><input type="text" class="form-control" name="alamat" /></td>
+            </tr>
+            <tr>
+                <td>e-mail:</td>
+                <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+            </tr>
+            <tr>
+                <td>Nomor Telepon:</td>
+                <td><input type="number" class="form-control" name="telepon" placeholder="+62..." /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" class="btn btn-primary" value="Daftar" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</section>
+
+<div class="footer">
+    <p>&copy; 2024 Perpustakaan UNIMED. Semua hak dilindungi.</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
