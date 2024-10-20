@@ -9,35 +9,38 @@
         body {
             background-image: url("picture/Winners 2013.jpeg");
             background-size: cover;
-            color: black;
+            color: white;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-default {
+            background-color: rgba(248, 248, 248, 0.9);
+            border-color: #e7e7e7;
+        }
+        .navbar-default .navbar-brand, 
+        .navbar-default .navbar-nav > li > a {
+            color: #337ab7;
+        }
+        .navbar-default .navbar-nav > li > a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
         }
         h1 {
-            color: blue;
+            color: #FFD700;
             text-align: center;
             text-decoration: underline;
         }
-        h2, h3, h4, h5, h6 {
-            color: darkblue;
-        }
-        p {
-            color: red;
+        h2 {
+            color: #FFD700;
+            text-align: center;
         }
         section {
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             margin: 20px 0;
-            border-radius: 5px;
-        }
-        .section1 {
-            background-color: yellow;
-        }
-        .section2 {
-            background-color: lightgreen;
-        }
-        .section3 {
-            background-color: lightcoral;
+            border-radius: 10px;
+            color: white;
         }
         table {
             width: 100%;
@@ -45,31 +48,27 @@
             margin-top: 20px;
         }
         th, td {
-            border: 1px solid black;
+            border: 1px solid #ddd;
             padding: 8px;
-            text-align: left;
         }
         th {
-            background-color: lightgray;
+            background-color: #444;
+            color: #fff;
         }
-        .navbar-default {
-    background-color: #f8f8f8; /* Ubah sesuai warna yang diinginkan */
-    border-color: #e7e7e7;
-    }
-    .navbar-default .navbar-brand {
-    color: #337ab7; /* Ubah warna teks */
-    }
-    .navbar-default .navbar-nav > li > a {
-    color: #337ab7; /* Ubah warna teks untuk item menu */
-    }
-    .navbar-default .navbar-nav > li > a:hover {
-    background-color: #e7e7e7; /* Efek hover */
-    }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Perpustakaan UNIMED</a>
@@ -96,248 +95,245 @@
     </div>
 </nav>
 
-    <section id="home" class="section1">
-        <h1>Perpustakaan UNIMED</h1>
-        <h2>Selamat Datang di Web Perpustakaan UNIMED</h2>
-        <p>Samuel Kevin Sinaga 222201021 <i>web</i> ini adalah web pertama saya</p>
-        <h3>Berikut ini adalah gambar dari gedung Perpustakaan UNIMED.</h3>
-        <img src="https://www.unimed.ac.id/wp-content/uploads/2022/06/unimedmenubaru-scaled.jpg" 
-     alt="Gedung Perpustakaan UNIMED" 
-     class="img-responsive center-block" 
-     style="max-width: 80%; height: auto;" />
-    </h4>
-    <p style="margin-bottom: 50px">
-        <h5 style="text-center"><i>Perpustakaan UNIMED</i></h5>
-    </p>
-   <div class="text-center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/e8DYUPu3PuM?si=MZnc00nOnOfrv1wl" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-   </div>
+<section id="home">
+    <h1>Perpustakaan UNIMED</h1>
+    <h2>Selamat Datang di Web Perpustakaan UNIMED</h2>
+    <p>Samuel Kevin Sinaga 222201021 <i>web</i> ini adalah web pertama saya</p>
+    <h3>Berikut ini adalah gambar dari gedung Perpustakaan UNIMED.</h3>
+    <img src="https://www.unimed.ac.id/wp-content/uploads/2022/06/unimedmenubaru-scaled.jpg" 
+         alt="Gedung Perpustakaan UNIMED" 
+         class="img-responsive center-block" 
+         style="max-width: 80%; height: auto;" />
+    <div class="text-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/e8DYUPu3PuM?si=MZnc00nOnOfrv1wl" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="text-center">
+        <audio controls>
+            <source src="music/Fana.mp3" type="audio/mpeg">
+        </audio>
+        <h6>THE PAPS - FANA</h6>
+    </div>
+</section>
 
-    <p style="text-center"><h6>THE PAPS - FANA</h6></p>
-    <p style="margin-bottom: 50px">
-        <div class="text-center">
-            <audio controls>
-                <source src="music/Fana.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-    </p>  
-    </section>
-
-    <section id="pemesanan" class="section2">
-        <h2>Formulir Pemesanan Buku</h2>
-        <form>
-            <table>
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Anggota Perpustkaan:</td>
-                    <td><input type="password" /></td>
-                </tr>
-                <tr>
-                    <td>e-mail:</td>
-                    <td><input type="email" name="email" placeholder="@gmail.com" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Telepon:</td>
-                    <td><input type="number" name="Nomor Telepon" placeholder="+62..." /></td>
-                </tr>
-                <tr>
-                    <td>Jenis Kelamin:</td>
-                    <td>
-                        <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
-                        <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="2">Detail Pemesanan</th>
-                </tr>
-                <tr>
-                    <td>Judul Buku Yang Dipesan:</td>
-                    <td><input type="text" name="Judul Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Penulis Buku:</td>
-                    <td><input type="text" name="Penulis Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor ISBN:</td>
-                    <td><input type="number" name="Nomor ISBN" /></td>
-                </tr>
-                <tr>
-                    <td>Tanggal Pemesanan:</td>
-                    <td><input type="date" name="Tanggal Pemesanan" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" name="submit" value="Kirim" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </section>
-
-    <section id="perpanjangan" class="section3">
-        <h2>Formulir Perpanjangan Peminjaman Buku</h2>
-        <form>
-            <table>
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Anggota Perpustakaan:</td>
-                    <td><input type="password" /></td>
-                </tr>
-                <tr>
-                    <td>e-mail:</td>
-                    <td><input type="email" name="email" placeholder="@gmail.com" /></td>
-                </tr>
-                <tr>
-                    <th colspan="2">Detail Pemesanan Awal</th>
-                </tr>
-                <tr>
-                    <td>Judul Buku Yang Dipesan:</td>
-                    <td><input type="text" name="Judul Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Penulis Buku:</td>
-                    <td><input type="text" name="Penulis Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor ISBN:</td>
-                    <td><input type="number" name="Nomor ISBN" /></td>
-                </tr>
-                <tr>
-                    <th colspan="2">Perpanjangan Peminjaman Buku</th>
-                </tr>
-                <tr>
-                    <td>Tanggal Perpanjangan Peminjaman Buku:</td>
-                    <td><input type="date" name="Tanggal Pemanjang Peminjaman Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Alasan Perpanjangan:</td>
-                    <td><input type="text" name="Alasan Perpanjangan" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" name="submit" value="Kirim" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </section>
-    
-    <section id="tabel" class="section1">
-        <h2>Tabel Bahan Buku</h2>
+<section id="pemesanan">
+    <h2>Formulir Pemesanan Buku</h2>
+    <form>
         <table>
             <tr>
-                <th>No.</th>
-                <th>Judul Buku</th>
-                <th>Pengarang</th>
-                <th>Penerbit</th>
-                <th>Tahun Terbit</th>
-                <th>Jumlah Halaman</th>
-                <th>ISBN</th>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" class="form-control" /></td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>"Mikologi dasar dan terapan"</td>
-                <td>Indrawati Ganjar</td>
-                <td>Yayasan Obor Indonesia</td>
-                <td>2006</td>
-                <td>235</td>
-                <td>979-461-616-8</td>
+                <td>Nomor Anggota Perpustakaan:</td>
+                <td><input type="password" class="form-control" /></td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>"Perdagangan perempuan dalam jaringan pengedaran narkotika"</td>
-                <td>rahmanto</td>
-                <td>Yayasan Obor Indonesia</td>
-                <td>2005</td>
-                <td>162</td>
-                <td>979-461-522-6</td>
+                <td>e-mail:</td>
+                <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>"Menyibak karya sastra Perempuan Penderita HIV/AIDS"</td>
-                <td>Munawaroh, Lailatul</td>
-                <td>Balai Bahasa Bandung</td>
-                <td>2011</td>
-                <td>5</td>
-                <td>2085-7268</td>
+                <td>Nomor Telepon:</td>
+                <td><input type="number" class="form-control" name="nomor_telepon" placeholder="+62..." /></td>
             </tr>
             <tr>
-                <td>4</td>
-                <td>"Ekologi hewan"</td>
-                <td>Sipayung, Mariaty</td>
-                <td>Departemen Pendidikan Nasional Badan Penelitian dan Pengembangan</td>
-                <td>2014</td>
-                <td>140</td>
-                <td>978-602-1313-428</td>
+                <td>Jenis Kelamin:</td>
+                <td>
+                    <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                    <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+                </td>
             </tr>
             <tr>
-                <td>5</td>
-                <td>"Kapita selekta kedokteran veteriner (hewan kecil)"</td>
-                <td>Wiryosuhanto, Sri Dadi</td>
-                <td>Pustaka populer obors</td>
-                <td>2001</td>
-                <td>222</td>
-                <td>979-461-366-7</td>
+                <th colspan="2">Detail Pemesanan</th>
+            </tr>
+            <tr>
+                <td>Judul Buku Yang Dipesan:</td>
+                <td><input type="text" class="form-control" name="judul_buku" /></td>
+            </tr>
+            <tr>
+                <td>Penulis Buku:</td>
+                <td><input type="text" class="form-control" name="penulis_buku" /></td>
+            </tr>
+            <tr>
+                <td>Nomor ISBN:</td>
+                <td><input type="number" class="form-control" name="nomor_isbn" /></td>
+            </tr>
+            <tr>
+                <td>Tanggal Pemesanan:</td>
+                <td><input type="date" class="form-control" name="tanggal_pemesanan" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" class="btn btn-primary" value="Kirim" />
+                </td>
             </tr>
         </table>
-    </section>
+    </form>
+</section>
 
-    <section id="anggota" class="section2">
-        <h2>Formulir Anggota Perpustakaan Program Studi</h2>
-        <form>
-            <table>
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Induk Mahasiswa (NIM):</td>
-                    <td><input type="text" name="NIM" /></td>
-                </tr>
-                <tr>
-                    <td>Program Studi:</td>
-                    <td>
-                        <select name="prodi">
-                            <option value="ilmu perpustakaan">Ilmu Perpustakaan</option>
-                            <option value="informatika">Informatika</option>
-                            <option value="manajemen">Manajemen</option>
-                            <option value="akuntansi">Akuntansi</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Fakultas:</td>
-                    <td><input type="text" name="fakultas" /></td>
-                </tr>
-                <tr>
-                    <td>Alamat Rumah:</td>
-                    <td><input type="text" name="alamat" /></td>
-                </tr>
-                <tr>
-                    <td>e-mail:</td>
-                    <td><input type="email" name="email" placeholder="@gmail.com" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Telepon:</td>
-                    <td><input type="number" name="telepon" placeholder="+62..." /></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" value="Daftar" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </section>
+<section id="perpanjangan">
+    <h2>Formulir Perpanjangan Peminjaman Buku</h2>
+    <form>
+        <table>
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>Nomor Anggota Perpustakaan:</td>
+                <td><input type="password" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>e-mail:</td>
+                <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+            </tr>
+            <tr>
+                <th colspan="2">Detail Pemesanan Awal</th>
+            </tr>
+            <tr>
+                <td>Judul Buku Yang Dipesan:</td>
+                <td><input type="text" class="form-control" name="judul_buku" /></td>
+            </tr>
+            <tr>
+                <td>Penulis Buku:</td>
+                <td><input type="text" class="form-control" name="penulis_buku" /></td>
+            </tr>
+            <tr>
+                <td>Nomor ISBN:</td>
+                <td><input type="number" class="form-control" name="nomor_isbn" /></td>
+            </tr>
+            <tr>
+                <th colspan="2">Perpanjangan Peminjaman Buku</th>
+            </tr>
+            <tr>
+                <td>Tanggal Perpanjangan Peminjaman Buku:</td>
+                <td><input type="date" class="form-control" name="tanggal_perpanjangan" /></td>
+            </tr>
+            <tr>
+                <td>Alasan Perpanjangan:</td>
+                <td><input type="text" class="form-control" name="alasan_perpanjangan" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" class="btn btn-primary" value="Kirim" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+<section id="tabel">
+    <h2>Tabel Bahan Buku</h2>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Judul Buku</th>
+            <th>Pengarang</th>
+            <th>Penerbit</th>
+            <th>Tahun Terbit</th>
+            <th>Jumlah Halaman</th>
+            <th>ISBN</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>"Mikologi dasar dan terapan"</td>
+            <td>Indrawati Ganjar</td>
+            <td>Yayasan Obor Indonesia</td>
+            <td>2006</td>
+            <td>235</td>
+            <td>979-461-616-8</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>"Perdagangan perempuan dalam jaringan pengedaran narkotika"</td>
+            <td>rahmanto</td>
+            <td>Yayasan Obor Indonesia</td>
+            <td>2005</td>
+            <td>162</td>
+            <td>979-461-522-6</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>"Menyibak karya sastra Perempuan Penderita HIV/AIDS"</td>
+            <td>Munawaroh, Lailatul</td>
+            <td>Balai Bahasa Bandung</td>
+            <td>2011</td>
+            <td>5</td>
+            <td>2085-7268</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>"Ekologi hewan"</td>
+            <td>Sipayung, Mariaty</td>
+            <td>Departemen Pendidikan Nasional Badan Penelitian dan Pengembangan</td>
+            <td>2014</td>
+            <td>140</td>
+            <td>978-602-1313-428</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>"Kapita selekta kedokteran veteriner (hewan kecil)"</td>
+            <td>Wiryosuhanto, Sri Dadi</td>
+            <td>Pustaka populer obors</td>
+            <td>2001</td>
+            <td>222</td>
+            <td>979-461-366-7</td>
+        </tr>
+    </table>
+</section>
+
+<section id="anggota">
+    <h2>Formulir Anggota Perpustakaan Program Studi</h2>
+    <form>
+        <table>
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>Nomor Induk Mahasiswa (NIM):</td>
+                <td><input type="text" class="form-control" name="NIM" /></td>
+            </tr>
+            <tr>
+                <td>Program Studi:</td>
+                <td>
+                    <select class="form-control" name="prodi">
+                        <option value="ilmu perpustakaan">Ilmu Perpustakaan</option>
+                        <option value="informatika">Informatika</option>
+                        <option value="manajemen">Manajemen</option>
+                        <option value="akuntansi">Akuntansi</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Fakultas:</td>
+                <td><input type="text" class="form-control" name="fakultas" /></td>
+            </tr>
+            <tr>
+                <td>Alamat Rumah:</td>
+                <td><input type="text" class="form-control" name="alamat" /></td>
+            </tr>
+            <tr>
+                <td>e-mail:</td>
+                <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+            </tr>
+            <tr>
+                <td>Nomor Telepon:</td>
+                <td><input type="number" class="form-control" name="telepon" placeholder="+62..." /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" class="btn btn-primary" value="Daftar" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</section>
+
+<div class="footer">
+    <p>&copy; 2024 Perpustakaan UNIMED. Semua hak dilindungi.</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
