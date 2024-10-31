@@ -31,20 +31,33 @@
             margin: 20px 0;
             border-radius: 10px;
             color: white;
-     .book {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 20px;
-    text-align: center;
-}
+        }
 
-.book img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
+        .book {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .book:hover {
+            transform: scale(1.05);
+        }
+
+        .book img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            max-height: 200px;
+        }
+
+        h3, p {
+            color: black; /* Warna tulisan menjadi hitam */
+        }
+
         .footer {
             text-align: center;
             padding: 20px;
@@ -103,7 +116,7 @@ const gallery = document.getElementById("book-gallery");
 
 books.forEach(book => {
     const colDiv = document.createElement("div");
-    colDiv.classList.add("col-xs-6", "col-md-4"); // Menggunakan kelas Bootstrap untuk responsivitas
+    colDiv.classList.add("col-xs-6", "col-md-4");
 
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
