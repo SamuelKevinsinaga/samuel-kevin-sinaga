@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perpustakaan UNIMED</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("picture/09528de6b7772c6ae081a2ee382e7eab.jpg");
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #FFD700;
+            text-align: center;
+            text-decoration: underline;
+        }
+        h2 {
+            color: #FFD700;
+            text-align: center;
+        }
+        section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            color: white;
+     .book {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<section id="gallery" class="container">
+    <h2 class="text-center">Galeri Buku</h2>
+    <div class="row" id="book-gallery"></div>
+</section>
+
+<div class="footer">
+    <p>&copy; 2024 Perpustakaan UNIMED. Semua hak dilindungi.</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+  const books = [
+    {
+        title: "Mikologi Dasar dan Terapan",
+        image: "https://via.placeholder.com/150",
+        description: "Pengarang: Indrawati Ganjar"
+    },
+    {
+        title: "Perdagangan Perempuan dalam Jaringan Pengedaran Narkotika",
+        image: "https://via.placeholder.com/150",
+        description: "Pengarang: Rahmanto"
+    },
+    {
+        title: "Hukum Administrasi Negara",
+        image: "https://via.placeholder.com/150",
+        description: "Pengarang: Ridwan HR"
+    },
+    {
+        title: "Ekologi Hewan",
+        image: "https://via.placeholder.com/150",
+        description: "Pengarang: Sipayung, Mariaty"
+    },
+    {
+        title: "Kesehatan, Olahraga & Kinerja",
+        image: "https://via.placeholder.com/150",
+        description: "Pengarang: Giriwijoyo, H. Y. S. Santosa"
+    }
+];
+
+const gallery = document.getElementById("book-gallery");
+
+books.forEach(book => {
+    const colDiv = document.createElement("div");
+    colDiv.classList.add("col-xs-6", "col-md-4"); // Menggunakan kelas Bootstrap untuk responsivitas
+
+    const bookDiv = document.createElement("div");
+    bookDiv.classList.add("book");
+
+    bookDiv.innerHTML = `
+        <img src="${book.image}" alt="${book.title}">
+        <h3>${book.title}</h3>
+        <p>${book.description}</p>
+    `;
+
+    colDiv.appendChild(bookDiv);
+    gallery.appendChild(colDiv);
+});
+  
+</body>
+</html>
