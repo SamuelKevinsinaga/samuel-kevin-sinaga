@@ -41,6 +41,9 @@
             margin-bottom: 20px;
             text-align: center;
             transition: transform 0.3s;
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Mengatur arah kolom */
+            align-items: center; /* Menyelaraskan item ke tengah */
         }
 
         .book:hover {
@@ -48,10 +51,10 @@
         }
 
         .book img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            max-height: 200px;
+            width: 100%; /* Memastikan gambar mengambil lebar penuh */
+            height: auto; /* Mempertahankan rasio aspek */
+            max-height: 200px; /* Batas tinggi untuk gambar */
+            object-fit: cover; /* Memastikan gambar terpotong dengan baik */
         }
 
         h3, p {
