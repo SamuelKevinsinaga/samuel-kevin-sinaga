@@ -41,9 +41,6 @@
             margin-bottom: 20px;
             text-align: center;
             transition: transform 0.3s;
-            display: flex; /* Menggunakan flexbox */
-            flex-direction: column; /* Mengatur arah kolom */
-            align-items: center; /* Menyelaraskan item ke tengah */
         }
 
         .book:hover {
@@ -51,14 +48,14 @@
         }
 
         .book img {
-            width: 100%; /* Memastikan gambar mengambil lebar penuh */
-            height: auto; /* Mempertahankan rasio aspek */
-            max-height: 200px; /* Batas tinggi untuk gambar */
-            object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
         }
 
         h3, p {
-            color: black; /* Warna tulisan menjadi hitam */
+            color: black;
         }
 
         .footer {
@@ -119,7 +116,7 @@ const gallery = document.getElementById("book-gallery");
 
 books.forEach(book => {
     const colDiv = document.createElement("div");
-    colDiv.classList.add("col-xs-6", "col-md-4");
+    colDiv.classList.add("col-xs-12", "col-sm-6", "col-md-4");
 
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
