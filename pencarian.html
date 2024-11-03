@@ -51,14 +51,15 @@
             margin-right: 10px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <section>
-    <h1>Pencarian Buku</h1>
-    <form id="searchForm">
-        <input type="text" id="searchInput" placeholder="Cari buku..." required>
-        <button type="submit">Cari</button>
-    </form>
+        <h1>Pencarian Buku</h1>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Cari buku..." required>
+            <button type="submit">Cari</button>
+        </form>
     </section>
     
     <section>
@@ -74,28 +75,25 @@
             { title: "Kesehatan, Olahraga & Kinerja", author: "Giriwijoyo, H. Y. S. Santosa", image: "picture/createthumb (3).jpeg" }
         ];
 
-        document.getElementById('searchForm').addEventListener('submit', function(event) {
+        $('#searchForm').on('submit', function(event) {
             event.preventDefault();
             
-            const query = document.getElementById('searchInput').value.toLowerCase();
+            const query = $('#searchInput').val().toLowerCase();
             const results = books.filter(book => book.title.toLowerCase().includes(query));
             
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = '';
+            $('#results').empty();
 
             if (results.length > 0) {
                 results.forEach(book => {
-                    const bookDiv = document.createElement('div');
+                    const bookDiv = $('<div></div>');
+                    const img = $('<img>').attr('src', book.image);
                     
-                    const img = document.createElement('img');
-                    img.src = book.image; 
-                    
-                    bookDiv.textContent = `${book.title} oleh ${book.author}`;
+                    bookDiv.text(`${book.title} oleh ${book.author}`);
                     bookDiv.prepend(img); 
-                    resultsDiv.appendChild(bookDiv);
+                    $('#results').append(bookDiv);
                 });
             } else {
-                resultsDiv.textContent = 'Tidak ada buku yang ditemukan.';
+                $('#results').text('Tidak ada buku yang ditemukan.');
             }
         });
     </script>
