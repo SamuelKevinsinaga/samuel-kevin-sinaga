@@ -33,14 +33,24 @@
             color: white;
         }
 
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Menyelaraskan kolom ke tengah */
+        }
+
         .book {
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 20px;
+            margin: 10px; /* Margin antar buku */
             text-align: center;
             transition: transform 0.3s;
+            flex: 1 1 30%; /* Memastikan lebar yang sama untuk buku */
+            min-width: 250px; /* Batas lebar minimum */
+            max-width: 300px; /* Batas lebar maksimum */
+            height: 350px; /* Tinggi konsisten */
         }
 
         .book:hover {
@@ -50,7 +60,7 @@
         .book img {
             width: 100%;
             height: auto;
-            max-height: 200px;
+            max-height: 150px; /* Mengatur tinggi maksimum gambar */
             object-fit: cover;
         }
 
