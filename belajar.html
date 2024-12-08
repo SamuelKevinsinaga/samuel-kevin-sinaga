@@ -1,1 +1,63 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Belajar PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .day {
+            background-color: #f0f8ff;
+            border: 1px solid #dcdcdc;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Daftar Hari Belajar PHP</h1>
+    </header>
+
+    <div class="content" id="days-container">
+        <!-- JavaScript akan mengisi hari-hari di sini -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Belajar PHP. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // Menggunakan JavaScript untuk menampilkan "Hari ke-X"
+        let container = document.getElementById("days-container");
+
+        // Loop untuk menampilkan "Hari ke-X belajar PHP" dari 1 hingga 1000
+        for (let i = 1; i <= 1000; i++) {
+            let dayDiv = document.createElement("div");
+            dayDiv.classList.add("day");
+            dayDiv.textContent = `Ini adalah hari ke-${i} belajar PHP`;
+            container.appendChild(dayDiv);
+        }
+    </script>
+
+</body>
+</html>
