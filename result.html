@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Perhitungan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .result {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hasil Perhitungan</h1>
+
+    <div class="result">
+        <h3>Hasil:</h3>
+        <p id="resultText"></p>
+        <a href="index.html">Kembali ke Formulir</a>
+    </div>
+
+    <script>
+        // Fungsi untuk mendapatkan data dari query string di URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Mengambil nilai dari query string
+        var num1 = parseFloat(getQueryParam('num1'));
+        var num2 = parseFloat(getQueryParam('num2'));
+        var operation = getQueryParam('operation');
+        var result = 0;
+        var resultText = "";
+
+        // Melakukan perhitungan berdasarkan operasi yang dipilih
+        switch (operation) {
+            case "add":
+                result = num1 + num2;
+                resultText = `${num1} + ${num2} = ${result}`;
+                break;
+            case "subtract":
+                result = num1 - num2;
+                resultText = `${num1} - ${num2} = ${result}`;
+                break;
+            case "multiply":
+                result = num1 * num2;
+                resultText = `${num1} * ${num2} = ${result}`;
+                break;
+            case "divide":
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                    resultText = `${num1} / ${num2} = ${result}`;
+                } else {
+                    resultText = "Error: Pembagian dengan Nol tidak diperbolehkan!";
+                }
+                break;
+            default:
+                resultText = "Operasi tidak valid!";
+        }
+
+        // Menampilkan hasil perhitungan di halaman
+        document.getElementById('resultText').textContent = resultText;
+    </script>
+
+</body>
+</html>
