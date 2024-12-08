@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            font-size: 14px;
+        }
+        .success-message {
+            color: green;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        
+        <!-- Form Login -->
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Pesan hasil login -->
+        <div id="message" class="error-message"></div>
+    </div>
+
+    <script>
+        // Fungsi untuk menangani login
+        function handleLogin(event) {
+            event.preventDefault(); // Mencegah form dikirim secara default
+            
+            // Mengambil nilai dari input username dan password
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Mendapatkan elemen untuk menampilkan pesan
+            var messageDiv = document.getElementById("message");
+
+            // Kondisi pertama: Jika ada input yang kosong
+            if (!username || !password) {
+                messageDiv.className = "error-message";
+                messageDiv.textContent = "Input tidak lengkap. Silakan isi username dan password.";
+                return;
+            }
+
+            // Kondisi kedua: Cek apakah username dan password sesuai
+            if (username === "admin" && password === "12345") {
+                messageDiv.className = "success-message";
+                messageDiv.textContent = "Login Sukses!";
+                setTimeout(function() {
+                    alert("Selamat datang, " + username + "!");
+                    // Arahkan ke halaman lain jika diperlukan
+                    // window.location.href = "dashboard.html";
+                }, 500);
+                return;
+            }
+
+            // Kondisi ketiga: Jika ID atau Password salah
+            messageDiv.className = "error-message";
+            messageDiv.textContent = "ID atau Password salah. Silakan coba lagi.";
+        }
+    </script>
+
+</body>
+</html>
