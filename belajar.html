@@ -31,6 +31,31 @@
             margin-bottom: 5px;
             border-radius: 5px;
         }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+        label, select, input {
+            margin-bottom: 15px;
+            display: block;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -42,6 +67,26 @@
     <div class="content" id="days-container">
         <!-- JavaScript akan mengisi hari-hari di sini -->
     </div>
+    <h1>Operasi Matematika</h1>
+
+    <!-- Formulir untuk input bilangan dan memilih operasi -->
+    <form id="calculatorForm" onsubmit="return handleFormSubmit(event)">
+        <label for="num1">Bilangan 1:</label>
+        <input type="number" id="num1" name="num1" required>
+
+        <label for="num2">Bilangan 2:</label>
+        <input type="number" id="num2" name="num2" required>
+
+        <label for="operation">Pilih Operasi:</label>
+        <select id="operation" name="operation" required>
+            <option value="add">Penjumlahan</option>
+            <option value="subtract">Pengurangan</option>
+            <option value="multiply">Perkalian</option>
+            <option value="divide">Pembagian</option>
+        </select>
+
+        <button type="submit">Hitung</button>
+    </form>
 
     <footer>
         <p>&copy; 2024 Belajar PHP. Semua hak dilindungi.</p>
@@ -57,6 +102,23 @@
             dayDiv.classList.add("day");
             dayDiv.textContent = `Ini adalah hari ke-${i} belajar PHP`;
             container.appendChild(dayDiv);
+        }
+         // Fungsi untuk menangani pengiriman formulir
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Mencegah pengiriman formulir secara default
+
+            // Mengambil nilai dari input formulir
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var operation = document.getElementById("operation").value;
+
+            // Membuat URL baru dengan query string untuk mengirimkan data
+            var resultUrl = "result.html?num1=" + encodeURIComponent(num1) + 
+                            "&num2=" + encodeURIComponent(num2) + 
+                            "&operation=" + encodeURIComponent(operation);
+
+            // Arahkan ke halaman hasil dengan data yang telah dimasukkan
+            window.location.href = resultUrl;
         }
     </script>
 
